@@ -352,7 +352,7 @@ class concat_view : public view_interface<concat_view<Views...>> {
       }
     }
 
-    decltype(auto) get_parent_views() const { return (parent_->views_); }
+    constexpr decltype(auto) get_parent_views() const { return (parent_->views_); }
 
     template <class... Args>
     explicit constexpr iterator(ParentView* parent, Args&&... args) requires
